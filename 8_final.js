@@ -85,6 +85,9 @@ document.body.onload = function() {
 btnRequest.addEventListener('click', async() =>{
     const page = pageInp.value;
     const limit = limitInp.value;
+    if ( (limit > 10 || limit < 1) && (page > 10 || page < 1) ) return outputField.textContent = "Номер страницы и лимит вне диапазона от 1 до 10"
+    else if (page > 10 || page < 1) return outputField.textContent = "Номер страницы вне диапазона от 1 до 10"
+    else if (limit > 10 || limit < 1) return outputField.textContent = "Лимит вне диапазона от 1 до 10"
     const url = `https://picsum.photos/v2/list?page=${page}&limit=${limit}`;
     const data = await useRequest(url);
     localStorage.clear();
