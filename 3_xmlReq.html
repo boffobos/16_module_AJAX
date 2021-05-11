@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Годовой отчет</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            max-width: 1100px;
+            text-align: center;
+            background: #f4f4f4;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .btn {
+            padding: 10px 5px;
+            display: block;
+            margin: auto;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: #000 1px solid;
+        }
+
+        .btn:hover {
+            opacity: 0.7;
+        }
+
+        .input {
+            padding: 10px 5px;
+            margin-top: 10px;
+            width: 120px;
+        }
+
+        table {
+            border-spacing: 0px;
+            display: block;
+            margin: auto;
+            margin-top: 15px;
+            border-collapse: collapse;
+            width: fit-content;
+            max-width: 500px;
+            overflow: auto;
+
+        }   
+
+        th, td {
+            border: #000 1px solid;
+            padding: 5px 10px;
+        }
+
+        th {
+            border-top: #000 1px solid;
+        }
+
+        .chart {
+            display: block;
+            margin: auto;
+            width: 500px;
+            height: auto;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Годовой отчет бухгалтерии</h1>
+        <select name="year" class="input" id="year">
+            <option value="2017" selected>2017</option>
+            <option value="2018">2018</option>
+        </select>
+        <button id='load' class='btn'>Загрузить отчет</button>
+        <div class="output">
+        </div>
+    </div>
+    <script src="./3_xmlReq.js"></script>
+    <!-- <script src="./temp.js"></script> -->
+</body>
+</html>

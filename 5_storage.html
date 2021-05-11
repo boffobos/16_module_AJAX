@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./5_style.css">
+  <title>НовостиNews</title>
+</head>
+<body>
+  
+  <nav>
+    <div id="nav-links">
+      <a href="#">Новости IT</a>
+      <a href="#">Новости политики</a>
+      <a href="#">Новости экономики</a>
+      <a href="#">Новости социума</a>
+    </div>
+    <div id="login">
+      <button id="open" class="btn">Войти</button>
+    </div>
+  </nav>
+  
+  <dialog id="login-form">
+    <form>
+      <input type="text" name="login" class="signin" id="login" placeholder="Логин" required>
+      <input type="text" name="password" class="signin" id="pass" placeholder="Пароль" required>
+      <div>
+        <button class="btn" id="btnLogin">Войти</button>
+        <button class="btn" id="btnClose">Закрыть</button>
+      </div>
+      <div>
+        <p>Забыли пароль? <a href="#" id="forgot-pass">Восстановить</a></p>
+        <a href="#" id="signup">Регистрация</a>
+      </div>
+    </form>
+  </dialog>
+  <dialog id="popup">
+    <div id=message></div>
+    <div id="buttons">  
+    <button class="btn" id="btnOk">Ok!</button>
+    </div>
+  </dialog>
+
+  <header>
+    <h1>Новости</h1>
+  </header>
+  <main>
+
+  </main>
+  
+  <footer>
+    <div class="links">
+      <a href="#">Вакансии</a>
+      <a href="#">Контакты</a>
+      <a href="#">О нас</a>
+      <a href="#">Реклама</a>
+  </div>
+  <div class="copyright">&copy;НовостиNews <span class="year-text">2021</span></div>
+  </footer>
+  <script src="./5_storage.js"></script>
+</body>
+</html>

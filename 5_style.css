@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+main {
+  position: relative;
+  height: 60vh;
+}
+
+main::before {
+  content: '';
+  background-color: rgba(233, 227, 227, 0.90);
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f57b17;
+  padding: 10px 20px;
+}
+
+nav a {
+  display: block;
+  height: 100%;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 10px 10px 0 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #f0740f;
+  border-radius: 6px;
+  }
+
+#nav-links {
+  display: flex;
+}
+
+nav a:hover {
+  transform: translateY(5px);
+  color: #F9E79F;
+}
+
+header {
+  width: 100vw;
+  height: 20vh;
+  /* background-color: #d0d1d2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./header_img.jpg') center/cover no-repeat;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+
+footer .links {
+  margin-bottom: 10px;
+}
+
+footer .links>a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 30px;
+}
+
+.links a:hover {
+  transform: translateY(5px);
+  color: #084E86;
+  /* height: 20px; */
+  /* background-color: gray; */
+}
+
+.copyright {
+  color: rgb(108, 117, 125);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.copyright .year-text {
+  color: #333333;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.news {
+  /* background-color: #fff; */
+  position: relative;
+  padding: 50px 0 32px;
+  z-index: 2;
+}
+
+section {
+  width: 768px;
+  margin: 0 auto 32px;
+  padding: 6px 15px;
+  position: relative;
+  /* border-bottom: rgb(128, 128, 128) 1px solid; */
+}
+
+section a, form a {
+  color: rgb(59, 54, 52);
+  text-decoration: none;
+}
+
+section a:hover, form a:hover{
+  color: #0085a1;
+}
+
+section h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 5px;
+}
+
+.article-meta {
+  color: rgb(99, 91, 91);
+  margin-bottom: 5px;
+}
+
+section img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+section p {
+  /* background-color: rgba(226, 222, 222, 0.8); */
+  padding: 13px 5px;
+}
+
+/* Стили выделения. Чего-то не сработало section::selection. */
+section p::selection, section a::selection, section img::selection, section .article-meta::selection, section h2::selection {
+  color: #fff;
+  background-color: #ff0000;
+}
+
+/* Стили кнопок */
+.btn {
+  padding: 5px 15px;
+  width: 100px;
+  border-radius: 5px;
+  border: #000 1px solid;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #FFF;
+}
+
+.btn:hover {
+  transition: 0.5s;
+  background-color: #F0130F;
+}
+
+dialog {
+  width: 300px;
+  height: fit-content;
+  margin: auto;
+  padding: 15px;
+}
+
+dialog::backdrop {
+  background:rgba(233, 227, 227, 0.95)
+}
+
+.signin {
+  padding: 5px;
+  margin: 10px auto;
+  display: block;
+  width: 200px;
+}
+
+.signin:focus::placeholder {
+  transition: 0.3s;
+  color: transparent;
+}
+
+dialog div {
+  margin: 25px auto;
+  text-align: center;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  background: #000 1px solid;
+}
+
+article>:nth-child(even) {
+    background-color: #e9b2b259;
+  }
+
+article>:nth-child(1)::before, 
+article>:nth-child(2)::before {
+  content: 'New';
+  color: #009600
+}

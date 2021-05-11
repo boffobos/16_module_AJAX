@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        main {
+            margin: auto;
+            max-width: 1100px;
+            text-align: center;
+            padding: 20px 0 0 0;
+        }
+
+        .out {
+            background: #f4f4f4;
+            max-width: 600px;
+            margin: auto;
+            background: url('./7_bg.png') no-repeat center center/cover;
+        }
+        .out > ul > li > input:checked + * {
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Введите номер пользователя</h1>
+        <input type="text" id="userId">
+        <button type="button" id="request">Запросить</button>
+        <div id="output" class="out"></div>
+    </main>
+    <script src="./7_fetch.js"></script>
+</body>
+</html>
