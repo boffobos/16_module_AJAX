@@ -92,7 +92,6 @@ btnRequest.addEventListener('click', async() =>{
     const data = await useRequest(url);
     localStorage.clear();
     localStorage.setItem('data', JSON.stringify(data));
-    //do ifs
     const list = listMaker(data);
     display(list);
 });
