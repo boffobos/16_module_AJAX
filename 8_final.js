@@ -3,7 +3,7 @@ const limitInp = document.querySelector('#limit');
 const btnRequest = document.querySelector('#request');
 const outputField = document.querySelector('#output');
 
-function useRequest(url) {
+function doRequest(url) {
     return fetch(url)
     .then(response => response.json())
     .catch(() => console.log('Fetch error'))
@@ -89,7 +89,7 @@ btnRequest.addEventListener('click', async() =>{
     else if (page > 10 || page < 1) return outputField.textContent = "Номер страницы вне диапазона от 1 до 10"
     else if (limit > 10 || limit < 1) return outputField.textContent = "Лимит вне диапазона от 1 до 10"
     const url = `https://picsum.photos/v2/list?page=${page}&limit=${limit}`;
-    const data = await useRequest(url);
+    const data = await doRequest(url);
     localStorage.clear();
     localStorage.setItem('data', JSON.stringify(data));
     const list = listMaker(data);
